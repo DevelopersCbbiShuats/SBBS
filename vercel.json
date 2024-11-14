@@ -1,0 +1,13 @@
+{
+    "builds":[{
+        "src": "SOBI_SHUATS_/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12"}
+    }],
+    "routers": [
+        {
+            "src": "/(.*)",
+            "dest": "SOBI_SHUATS_/wsgi.py"
+        }
+    ]
+}
